@@ -1,0 +1,80 @@
+Modify `app/build.gradle` to
+https://developer.android.com/studio/write/java8-support[use Java 8 Language Features].
+
+[source, java]
+.app/build.gradle
+----
+android {
+...
+..
+.
+include::{sourceDir}/app/build.gradle[tag=compileOptions]
+}
+----
+
+Micronaut dependency injection is based on annotation processors. Modify `app/build.gradle` to enable Micronaut's DI.
+
+[source, java]
+.app/build.gradle
+----
+ext {
+include::{sourceDir}/app/build.gradle[tag=extMicronautVersion]
+}
+
+dependencies {
+include::{sourceDir}/app/build.gradle[tag=annotationProcessor]
+}
+----
+
+You can find more information https://developer.android.com/studio/build/gradle-plugin-3-0-0-migration.html#annotationProcessor_config[on configuring annotations processors] in the Android documentation.
+
+[source, java]
+.app/build.gradle
+----
+android {
+...
+..
+.
+include::{sourceDir}/app/build.gradle[tag=lintOptions]
+}
+----
+
+[source, java]
+.app/src/main/java/io/micronaut/demo/Book.java
+----
+include::{sourceDir}/app/src/main/java/io/micronaut/demo/Book.java[]
+----
+
+[source, java]
+.app/src/main/java/io/micronaut/demo/BooksFetcher.java
+----
+include::{sourceDir}/app/src/main/java/io/micronaut/demo/BooksFetcher.java[]
+----
+
+[source, java]
+.app/src/main/java/io/micronaut/demo/OnBooksFetched.java
+----
+include::{sourceDir}/app/src/main/java/io/micronaut/demo/OnBooksFetched.java[]
+----
+
+[source, java]
+.app/src/main/java/io/micronaut/demo/BooksRepository.java
+----
+include::{sourceDir}/app/src/main/java/io/micronaut/demo/BooksRepository.java[]
+----
+
+<1>
+
+[source, java]
+.app/src/main/java/io/micronaut/demo/MainActivity.java
+----
+include::{sourceDir}/app/src/main/java/io/micronaut/demo/MainActivity.java[]
+----
+
+<1>
+
+[source, java]
+.app/src/main/java/io/micronaut/demo/BaseApplication.java
+----
+include::{sourceDir}/app/src/main/java/io/micronaut/demo/BaseApplication.java[]
+---

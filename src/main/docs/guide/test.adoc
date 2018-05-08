@@ -1,0 +1,5 @@
+[source, java]
+.app/src/androidTest/java/io/micronaut/demo/DependencyInjectionEspressoTest.java
+----
+include::{sourceDir}/app/src/androidTest/java/io/micronaut/demo/DependencyInjectionEspressoTest.java[]
+----
