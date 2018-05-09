@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="bookfetcher.injected">Book Fetcher dependency not injected</string>
 </resources>

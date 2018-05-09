@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             });
         } else {
             Log.w(TAG, "Book Fetcher dependency not injected");
-            textViewMessage.setText("Book Fetcher dependency not injected");
+            textViewMessage.setText(R.string.bookfetcher_injected);
         }
     }
 
