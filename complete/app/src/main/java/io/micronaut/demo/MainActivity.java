@@ -48,10 +48,12 @@ public class MainActivity extends AppCompatActivity {
     void logBooks() {
         if ( bookList != null) {
             StringBuilder sb = new StringBuilder();
-            sb.append("Books Fetched #"+bookList.size());
+            sb.append("Books Fetched #");
+            sb.append(bookList.size());
             sb.append("\n");
             for ( Book book : bookList ) {
-                sb.append("Book "+book.getTitle());
+                sb.append("Book ");
+                sb.append(book.getTitle());
                 sb.append("\n");
             }
             Log.i(TAG, sb.toString());
