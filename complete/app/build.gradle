@@ -46,11 +46,7 @@ dependencies {
 
     //tag::annotationProcessor[]
     annotationProcessor "io.micronaut:inject-java:${micronautVersion}"
-    compile  "io.micronaut:inject:${micronautVersion}"
+    implementation  "io.micronaut:inject:${micronautVersion}"
     compileOnly "io.micronaut:inject-java:${micronautVersion}"
-    compile "io.micronaut:runtime:${micronautVersion}"
     //end::annotationProcessor[]
-
-    // If you add micronaut runtime you will need this:
-    compile "com.github.akarnokd:rxjava2-interop:0.12.7"
 }
