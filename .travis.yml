@@ -6,4 +6,6 @@ jdk:
 - oraclejdk8
 before_script:
 - rm -rf target
-script: ./travis-build.sh
+script:
+- if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./travis-build-pr.sh; fi
+- if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash ./travis-build.sh; fi
